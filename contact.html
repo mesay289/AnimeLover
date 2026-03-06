@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us - Anime World</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="signin.html">Sign In</a>
+</nav>
+
+<div class="container">
+    <div class="contact-card">
+        <h1>Contact Us</h1>
+<form onsubmit="return sendMessage()">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button class="button" type="submit">Send Message</button>
+</form>
+
+<p id="successMessage" style="display:none; color:#ffb84d; margin-top:15px;">
+    ✅ Your message has been sent successfully!
+</p>
+    </div>
+</div>
+<script>
+function sendMessage(){
+    document.getElementById("successMessage").style.display = "block";
+    return false; // Prevent page refresh
+}
+</script>
+</body>
+</html>

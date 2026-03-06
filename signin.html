@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign In - Anime World</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="signin.html">Sign In</a>
+</nav>
+
+<div class="form-card">
+    <h1>Sign In</h1>
+
+    <form onsubmit="return login()">
+        <input type="text" id="user" placeholder="Username" required>
+        <input type="password" id="pass" placeholder="Password" required>
+        <button class="button">Login</button>
+    </form>
+</div>
+
+<script>
+function login(){
+    localStorage.setItem("loggedIn","true");
+    window.location.href="welcome.html";
+    return false;
+}
+</script>
+
+<script>
+const links = document.querySelectorAll("nav a");
+links.forEach(link => {
+    if(link.href === window.location.href){
+        link.classList.add("active");
+    }
+});
+</script>
+</body>
+</html>

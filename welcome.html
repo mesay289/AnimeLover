@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Anime World</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body{
+            margin:0;
+            font-family:Segoe UI;
+            background:linear-gradient(135deg,#0f0f0f,#1a1a2e);
+            color:white;
+            text-align:center;
+            transition:0.5s;
+        }
+
+        .card{
+            background:rgba(0,0,0,0.7);
+            padding:40px;
+            width:320px;
+            margin:120px auto;
+            border-radius:20px;
+            box-shadow:0 0 25px #ffb84d;
+        }
+
+        .button{
+            padding:12px 25px;
+            border:none;
+            border-radius:25px;
+            background:orange;
+            cursor:pointer;
+            font-weight:bold;
+        }
+
+        .message{
+            margin-top:20px;
+            font-size:18px;
+            color:#ffb84d;
+            display:none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Welcome to Anime World 🔥</h1>
+    <p>Press the button for a surprise!</p>
+
+    <button class="button" onclick="surprise()">Click Me</button>
+
+    <div class="message" id="msg">
+        🎉 You unlocked the Anime Universe!
+    </div>
+</div>
+
+<script>
+function surprise(){
+    document.body.style.background =
+    "linear-gradient(135deg,#ff4da6,#1a1a2e,#000000)";
+
+    document.getElementById("msg").style.display = "block";
+}
+</script>
+
+<script>
+const links = document.querySelectorAll("nav a");
+links.forEach(link => {
+    if(link.href === window.location.href){
+        link.classList.add("active");
+    }
+});
+</script>
+</body>
+</html>
